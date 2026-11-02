@@ -1,0 +1,6 @@
+minimumReleaseAgeExclude:
+  - '@containerbase/base@14.60.0 || 14.61.0'
+  - '@renovatebot/base-image@13.154.0'
+  - '@renovatebot/osv-offline-db@4.5.8'
+  - '@renovatebot/osv-offline@4.5.8'
+  - renovate@44.206.0

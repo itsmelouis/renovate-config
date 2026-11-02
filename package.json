@@ -1,0 +1,14 @@
+{
+  "name": "@itsmelouis/renovate-config",
+  "private": true,
+  "description": "itsmelouis preset for Renovate",
+  "license": "MIT",
+  "scripts": {
+    "validate": "renovate-config-validator --strict --no-global default.json renovate.json",
+    "test": "pnpm run validate"
+  },
+  "devDependencies": {
+    "renovate": "^44.206.0"
+  },
+  "packageManager": "pnpm@12.16.1"
+}

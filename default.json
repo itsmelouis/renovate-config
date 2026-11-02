@@ -1,0 +1,74 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "description": "Default Renovate config for itsmelouis repositories",
+  "extends": [
+    "config:recommended",
+    "group:allNonMajor",
+    ":maintainLockFilesWeekly",
+    ":semanticCommitTypeAll(chore)",
+    "schedule:weekends",
+    "helpers:pinGitHubActionDigests"
+  ],
+  "rangeStrategy": "bump",
+  "minimumReleaseAge": "24 hours",
+  "commitBody": "Co-authored-by: Louis F. <me@itslouis.dev>",
+  "npm": {
+    "commitMessageTopic": "{{prettyDepType}} {{depName}}"
+  },
+  "lockFileMaintenance": {
+    "schedule": ["* * * * 0,6"]
+  },
+  "osvVulnerabilityAlerts": true,
+  "vulnerabilityAlerts": {
+    "labels": ["security"]
+  },
+  "packageRules": [
+    {
+      "matchManagers": ["npm"],
+      "matchDepTypes": ["engines"],
+      "matchDepNames": ["node"],
+      "enabled": false
+    },
+    {
+      "groupName": "nuxt framework",
+      "groupSlug": "nuxt",
+      "matchPackageNames": [
+        "nuxt",
+        "nuxt-nightly",
+        "@nuxt/kit",
+        "@nuxt/schema",
+        "@nuxt/vite-builder",
+        "@nuxt/webpack-builder",
+        "@nuxt/rspack-builder"
+      ]
+    },
+    {
+      "groupName": "cloudflare",
+      "groupSlug": "cloudflare",
+      "matchPackageNames": ["wrangler", "miniflare", "@cloudflare/**"]
+    },
+    {
+      "groupName": "lint and format",
+      "groupSlug": "lint",
+      "matchPackageNames": [
+        "eslint",
+        "@eslint/**",
+        "eslint-plugin-*",
+        "@*/eslint-plugin",
+        "@*/eslint-plugin-*",
+        "eslint-config-*",
+        "@antfu/eslint-config",
+        "@nuxt/eslint",
+        "@nuxt/eslint-config",
+        "typescript-eslint",
+        "@typescript-eslint/**",
+        "prettier",
+        "prettier-plugin-*",
+        "oxlint",
+        "oxfmt",
+        "@biomejs/biome"
+      ]
+    }
+  ],
+  "postUpdateOptions": ["pnpmDedupe"]
+}
