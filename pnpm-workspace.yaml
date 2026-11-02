@@ -4,3 +4,9 @@ minimumReleaseAgeExclude:
   - '@renovatebot/osv-offline-db@4.5.8'
   - '@renovatebot/osv-offline@4.5.8'
   - renovate@44.206.0
+
+allowBuilds:
+  core-js-pure: false
+  dtrace-provider: false
+  protobufjs: false
+  re2: false
