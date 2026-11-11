@@ -30,6 +30,11 @@
       "enabled": false
     },
     {
+      "description": "Digests have no release timestamp, so minimumReleaseAge would keep them pending forever",
+      "matchUpdateTypes": ["pinDigest", "digest"],
+      "minimumReleaseAge": null
+    },
+    {
       "groupName": "nuxt framework",
       "groupSlug": "nuxt",
       "matchPackageNames": [
