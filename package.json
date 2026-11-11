@@ -8,7 +8,7 @@
     "test": "pnpm run validate"
   },
   "devDependencies": {
-    "renovate": "^44.206.0"
+    "renovate": "^44.224.2"
   },
-  "packageManager": "pnpm@12.16.1"
+  "packageManager": "pnpm@12.18.0"
 }
